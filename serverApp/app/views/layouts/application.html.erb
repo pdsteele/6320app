@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>6320 Super Server</title>
+    <%= stylesheet_link_tag "application", media: "all" %>
+    <%= javascript_include_tag "application" %>
+    <%= csrf_meta_tags %>
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    <!--[if lt IE 9]>
+    <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+  </head>
+  <body>
+    <header class="navbar navbar-fixed-top navbar-inverse">
+      <div class="navbar-inner">
+        <div class="container">
+	    <button type="button" class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse">
+                <span class="icon-bar"></span><span class="icon-bar"></span><span class="icon-bar">
+                </span>
+            </button>
+          <div id="links" data-no-turbolink>
+          <%= link_to "6320", '/', id: "logo" %>
+	  <%= link_to "TV", '/tv', id: "logo" %>
+	  <%= link_to "Movies", '/movies', id: "logo" %>
+	  <%= link_to "Sab", '/sab', id: "logo" %>
+	  <%= link_to "VMs", '/vm', id: "logo" %>
+          </div>
+          <div class="nav-collapse collapse">
+            <ul class="nav pull-right">
+              <li><%= link_to "Media Tutorial",    '/tutorial' %></li>
+	      <li><%= link_to "Remote Control", '/remote' %></li>
+              <li><%= link_to "Plex/File Access", '/media' %></li>
+              <li><%= link_to "SSH/RDP/VPN", '/remoteAccess' %></li>
+              <li><%= link_to "Intranet", '/intranet' %></li>
+              <li><%= link_to "Sandboxes", '/sandboxes' %></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </header>
+    <div class="container">
+      <%= yield %>
+    </div>
+  </body>
+</html>

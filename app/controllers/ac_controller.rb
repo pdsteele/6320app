@@ -1,0 +1,2 @@
+class AcController < ApplicationController
+end

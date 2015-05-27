@@ -1,0 +1,30 @@
+<div class="row span8 offset2">
+
+<h1>Plex Streaming</h1>
+
+<p>Plex is a program on this server that allows us to watch our media from any device, any where. If you use a plex app on your tablet, phone, or computer, then you can access the server's media locally without any configuration or credentials.</p>
+
+<p>If you would like to access Plex while away from home, create a plex username at www.plex.tv and send Phil a text with it. He will enable sharing to your account, and then you will be able to watch the media anywhere. You can then use the Plex app or their webapp at plex.tv to stream the media.</p>  
+
+<h1>Queuing New Downloads</h1>
+<p>The links at the upper left are for the services that handle downloading media to the server. For regular folk, you will only need to access TV or Movies to add items to the queue. Sab is used for monitoring and managing the downloads themselves.</p>
+
+<h2>TV Shows</h2>
+<p>To download new episodes, a show must be added to the series list first. Check if your show is on there. Otherwise, at the top of the series list, select add series. You can then type the name of any show and add it. When done, return to the series page and select the show of interest. Expand seasons by selecting the arrows near their names, and download episodes by selecting the spyglass to the right. Entire seasons can be downloaded by selecting the spyglass at the upper-right corner of the season's table. If a show does not download, it may not be on usenet (old shows tend to not be). Contact Phil, and he may be able to help. </p> 
+
+<h2>Movies</h2>
+<p>Movies can be simply added by clicking the spyglass in the upper-right corner, typing the name of the movie, selecting the movie, then clicking add. You can even add movies that won't come out for a while, and it will download them as soon as they come online. Similar to TV shows, sometimes movies are not on usenet. Contact Phil, and he may be able to help.</p>  
+
+<h1>Mapping Media Drives</h1>
+
+<p>Mapping a media drive to your computer will give you the ability to browse and modify (only in the temp share) files on the server. You can also configure your operating system to mount the drives at boot, so that they are always accessible without any additional configuration. Instructions for mapping a network drive in Windows can be found <a href="http://windows.microsoft.com/en-us/windows/create-shortcut-map-network-drive#1TC=windows-7">here</a>, and instructions for doing so on a Mac can be found <a href="http://www.usciences.edu/it/helpdesk/forstudents/MacDriveMapping.shtml">here</a></p>
+
+<p>There are three main shares that you can possibly map. The first two shares are the movie and tv shares. You CANNOT modify these. If you would like to add content, see the next big section. The address for the movie share is <i>smb://192.168.1.241/movies</i>, and the address for the TV share is <i>smb://192.168.1.241/tv</i></p> 
+
+<p>The third share is the temp share. This can be written to by anyone on our network. The main reason to map this share would be to add your own content to the server (covered in the next section). The address for the temp share is <i>smb://192.168.1.241/temp</i>
+
+<h1>Adding Your Own Content</h1>
+
+<p>You can have your own content added to the server by simply mounting the temp share, then dragging your tv shows to the 'tvDroneFactory' folder. Movies can be put in the 'movieDroneFactory' folder. The media management apps scan these folders periodically, so do not be surprised if your content is not immediately exported to the tv/movie shares.</p>
+
+</div>

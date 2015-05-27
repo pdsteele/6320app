@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>6320 Super Server</title>
+    <%= stylesheet_link_tag "application", media: "all" %>
+    <%= javascript_include_tag "application" %>
+    <%= csrf_meta_tags %>
+    <!--[if lt IE 9]>
+    <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+  </head>
+  <body>
+
+    <div class="navbar navbar-fluid-top navbar-fixed-top navbar-inverse">
+      <div class="navbar-inner">
+        <div class="container-fluid">
+	  <button type="button" class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse">
+             <span class="icon-bar"></span><span class="icon-bar"></span><span class="icon-bar">
+             </span>
+          </button>
+          <%= link_to "6320", '/', id: "logo" %>
+	  <%= link_to "TV", '/tv', id: "logo" %>
+	  <%= link_to "Movies", '/movies', id: "logo" %>
+	  <%= link_to "Sab", '/sab', id: "logo" %>
+	  <%= link_to "VMs", '/vm', id: "logo" %>
+          <div class="container-fluid nav-collapse collapse">
+            <ul class="nav pull-right">
+              <li><%= link_to "Media Tutorial",    '/tutorial' %></li>
+              <li><%= link_to "Plex/File Access", '/media' %></li>
+              <li><%= link_to "SSH/RDP/VPN", '/remoteAccess' %></li>
+              <li><%= link_to "Intranet", '/intranet' %></li>
+              <li><%= link_to "Sandboxes", '/sandboxes' %></li>
+              <!-- end links -->
+            </ul>
+          </div><!-- end .nav-collapse menu -->
+        </div>
+      </div>
+    </div>
+
+    <div class="container-fluid">
+      <div class="row-fluid">  <!-- row for alerts -->
+        <div class="span6 offset3">
+          <div class="hidden-phone">
+            <% flash.each do |key, value| %>
+                <div class="alert alert-<%= key %>">
+                  <%= value %>
+                  <a class="close" data-dismiss="alert" href="#">&times;</a>
+                </div>
+            <% end %>
+          </div>
+        </div>
+
+        <div class="visible-phone phone-flashes">
+          <% flash.each do |key, value| %>
+              <div class="alert alert-<%= key %>">
+                <%= value %>
+                <a class="close" data-dismiss="alert" href="#">&times;</a>
+              </div>
+          <% end %>
+        </div>
+       <!--</div>  &lt;!&ndash; ends row fluid &ndash;&gt;-->
+
+      <!--<div class="row-fluid"> &lt;!&ndash; content row &ndash;&gt;-->
+        <div class="container"> <!-- renders content of the page -->
+          <%= yield %>
+        </div>
+      </div><!--/row-->
+
+    </div> <!-- /container -->
+
+    <!-- Javascripts
+    ================================================== -->
+    <!-- Placed at the end of the document so the pages load faster -->
+    <script type="text/javascript" src="http://maps.googleapis.com/maps/api/js?sensor=false"></script>
+    <%= javascript_include_tag "application" %>
+
+  </body>
+
+</html>
